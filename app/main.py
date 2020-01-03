@@ -21,7 +21,7 @@ greys = Greys[256]
 viridis = Viridis[11]
 
 # Plotting Data
-@lru_cache
+@lru_cache(maxsize=None)
 def update_plot(l, m, z):
     Y = spherical_harmonics[(l, m)](xx, yy, z)
     return [Y]

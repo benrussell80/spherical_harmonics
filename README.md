@@ -2,7 +2,7 @@
 A Bokeh app for visualizing the first few real, Cartesian spherical harmonics
 
 ## Installation
-Made with python 3.8
+Requires Python 3.6+
 ```
 # clone the repository and cd into it
 # optionally create a virtual environment

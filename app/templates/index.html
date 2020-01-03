@@ -1,5 +1,11 @@
 {% extends base %}
 
+{% block postamble %}
+<style>
+  {% include 'styles.css' %}
+</style>
+{% endblock postamble %}
+
 {% block contents %}
   {{ super() }}
 {% endblock %}

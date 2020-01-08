@@ -46,5 +46,3 @@ fetch('/figure')
     .then(function(item) { Bokeh.embed.embed_item(item); })
 </script>
 ```
-
-Enjoy!

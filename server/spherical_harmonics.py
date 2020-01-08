@@ -6,10 +6,10 @@ Get each Y_lm function using (l, m) as keys. Dictionary outputs a lambda functio
 """
 
 import numpy as np
-
+from math import pi
 
 def r(x, y, z):
-    return np.sqrt(x ** 2 + y ** 2 + z ** 2)
+    return (x ** 2 + y ** 2 + z ** 2) ** 0.5
 
 spherical_harmonics = {
     (0, 0):     lambda x, y, z: np.zeros(x.shape) + 0.5 * np.sqrt(1 / np.pi),

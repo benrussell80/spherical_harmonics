@@ -4,6 +4,7 @@ MarkupSafe==1.1.1
 numpy==1.17.4
 packaging==19.2
 Pillow==6.2.1
+pscript==0.7.3
 pyparsing==2.4.5
 python-dateutil==2.8.1
 PyYAML==5.2

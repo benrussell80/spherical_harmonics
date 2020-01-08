@@ -34,7 +34,7 @@ spherical_harmonics = {
     (4, -1):     lambda x, y, z: 0.75 * np.sqrt(5 / (2 * np.pi)) * z * y * (7 * z ** 2 - 3 * r(x, y, z) ** 2) / r(x, y, z) ** 4,
     (4, 0):     lambda x, y, z: 3 / 16 * np.sqrt(1 / np.pi) * (35 * z ** 4 - 30 * z ** 2 * r(x, y, z) ** 2 + 3 * r(x, y, z) ** 4) / r(x, y, z) ** 4,
     (4, 1):     lambda x, y, z: 0.75 * np.sqrt(5 / (2 * np.pi)) * z * x * (7 * z ** 2 - 3 * r(x, y, z) ** 2) / r(x, y, z) ** 4,
-    (4, 2):     lambda x, y, z: 3 / 8 * np.sqrt(5 / np.pi) (x ** 2 - y ** 2) * (7 * z ** 2 - r(x, y, z) ** 2) / r(x, y, z) ** 4,
+    (4, 2):     lambda x, y, z: 3 / 8 * np.sqrt(5 / np.pi) * (x ** 2 - y ** 2) * (7 * z ** 2 - r(x, y, z) ** 2) / r(x, y, z) ** 4,
     (4, 3):     lambda x, y, z: 0.75 * np.sqrt(35 / (2 * np.pi)) * z * x * (x ** 2 - 3 * y ** 2) / r(x, y, z) ** 4,
     (4, 4):     lambda x, y, z: 3 / 16 * np.sqrt(35 / np.pi) * (x ** 2 * (x ** 2 - 3 * y ** 2) - y ** 2 * (3 * x ** 2 - y ** 2)) / r(x, y, z) ** 4,
 }

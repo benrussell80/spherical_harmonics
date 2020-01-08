@@ -26,7 +26,7 @@ def spherical_harmonics_functions(l, m, x, y, z):
         (4, -1):     lambda x, y, z: 0.75 * (5 / (2 * pi)) ** 0.5 * z * y * (7 * z ** 2 - 3 * r(x, y, z) ** 2) / r(x, y, z) ** 4,
         (4, 0):     lambda x, y, z: 3 / 16 * (1 / pi) ** 0.5 * (35 * z ** 4 - 30 * z ** 2 * r(x, y, z) ** 2 + 3 * r(x, y, z) ** 4) / r(x, y, z) ** 4,
         (4, 1):     lambda x, y, z: 0.75 * (5 / (2 * pi)) ** 0.5 * z * x * (7 * z ** 2 - 3 * r(x, y, z) ** 2) / r(x, y, z) ** 4,
-        (4, 2):     lambda x, y, z: 3 / 8 * (5 / pi) ** 0.5 (x ** 2 - y ** 2) * (7 * z ** 2 - r(x, y, z) ** 2) / r(x, y, z) ** 4,
+        (4, 2):     lambda x, y, z: 3 / 8 * (5 / pi) ** 0.5 * (x ** 2 - y ** 2) * (7 * z ** 2 - r(x, y, z) ** 2) / r(x, y, z) ** 4,
         (4, 3):     lambda x, y, z: 0.75 * (35 / (2 * pi)) ** 0.5 * z * x * (x ** 2 - 3 * y ** 2) / r(x, y, z) ** 4,
         (4, 4):     lambda x, y, z: 3 / 16 * (35 / pi) ** 0.5 * (x ** 2 * (x ** 2 - 3 * y ** 2) - y ** 2 * (3 * x ** 2 - y ** 2)) / r(x, y, z) ** 4,
     }[l, m](x, y, z)

@@ -1,7 +1,7 @@
 from math import pi
 
 from bokeh.layouts import column, row, widgetbox
-from bokeh.models import ColumnDataSource, Slider
+from bokeh.models import ColumnDataSource, Slider, HoverTool
 from bokeh.models.callbacks import CustomJS
 from bokeh.plotting import figure, show
 from pscript import py2js
@@ -30,8 +30,12 @@ def plot(num=50, lo=-2*pi, hi=2*pi, z=1.5, l=3, m=2):
 
     js_code = py2js(sh_funcs)
 
-    p = figure(x_range=(0, num), y_range=(0, num))
+    p = figure(x_range=(0, num), y_range=(0, num), toolbar_location=None, match_aspect=True, aspect_scale=1, tools="",)
+    p.axis.visible = False
     p.image(image='image', x='x', y='y', dw='dw', dh='dh', source=source)
+    hover = HoverTool(tooltips=[(f'Y_lm: ', '@image{0.2f}')])
+    p.add_tools(hover)
+
 
     z_slider = Slider(start=-10, end=10, value=0.4, step=.1, title="z",
                         callback=CustomJS(args={'source': source}, code=js_code + """\n
@@ -63,8 +67,8 @@ def plot(num=50, lo=-2*pi, hi=2*pi, z=1.5, l=3, m=2):
                         source.change.emit();
                         """))
 
-    sliders = column(z_slider, l_slider, m_slider)
-    layout = row(sliders, p)
+    sliders = column(z_slider, l_slider, m_slider, sizing_mode="scale_width")
+    layout = row(sliders, p, sizing_mode="scale_both")
     
     return layout
 

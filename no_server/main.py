@@ -33,7 +33,7 @@ def plot(num=50, lo=-2*pi, hi=2*pi, z=1.5, l=3, m=2):
     p = figure(x_range=(0, num), y_range=(0, num), toolbar_location=None, match_aspect=True, aspect_scale=1, tools="",)
     p.axis.visible = False
     p.image(image='image', x='x', y='y', dw='dw', dh='dh', source=source)
-    hover = HoverTool(tooltips=[(f'Y_lm: ', '@image{0.2f}')])
+    hover = HoverTool(tooltips=[(f'Y_lm', '@image{0.2f}')])
     p.add_tools(hover)
 
 

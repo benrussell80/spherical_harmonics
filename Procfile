@@ -1,1 +1,1 @@
-web: bokeh serve --port=$PORT --num-procs=0 --allow-websocket-origin=spherical-harmonics.herokuapp.com --address=0.0.0.0 --use-xheaders server/
+web: gunicorn --bind 0.0.0.0:$PORT app:app

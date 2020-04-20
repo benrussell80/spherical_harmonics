@@ -136,6 +136,3 @@ dmypy.json
 
 # AWS
 *.pem
-
-# misc
-no_server/*.html

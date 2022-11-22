@@ -16,7 +16,7 @@ keyring==21.0.0
 MarkupSafe==1.1.1
 numpy==1.17.4
 packaging==19.2
-Pillow==7.1.1
+Pillow==9.3.0
 pkginfo==1.5.0.1
 pscript==0.7.3
 pycparser==2.19
